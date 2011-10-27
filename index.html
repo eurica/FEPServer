@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>SuperSimpleSecretStash</title>
+    <title>Flakey Error-prone Server</title>
     <style>
 body {
     background: url(http://toys.euri.ca/img/bg.png) repeat;
@@ -17,7 +17,7 @@ body {
     padding: 6px;
 }
 .box {
-    padding:6px;
+    padding:0px;
     border: 1px solid #888;
     background-color: white;
 }
@@ -57,26 +57,37 @@ margin: 20px;
   border: 1px solid #ccc;
   background-color: #eee;
 }
+td, tr, table {
+  spacing: 0; 
+  padding: 0;
+}
 </style>
 </head>
 <body>
     <div id="main">
       <div class="box shadow">
-              
-<h1>Flakey Error-prone Server</h1>
-<div class="subtitle">It's not a bug, it's a feature</div>
+<table>
+  <tr><td>
+    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Alfalfa_plant_bug.jpg/300px-Alfalfa_plant_bug.jpg" style="float:left;" title="bug, not feature">              
+  </td><td style="padding: 12px">
+    <h1>Flakey Error-prone Server</h1>
+    <div class="subtitle">It's not a bug, it's a feature</div>
 
-FEPS 0.0 is a predictably failing server for testing monitoring software.
+    <p><a href="http://fepserver.appspot.com">FEPServer</a> 0.0 is a predictably failing server for testing monitoring software.  You can use it to throw errors some or all of the time:
 
-<ul>
-  <li><a href="/err">/err</a> will throw a random error every time.</li>
-  <li><a href="/2">/[1-100]</a> will throw a random error once every N times.</li>
-  <li><a href="/err/404">/err/404</a> will throw a 404 error every time.  Valid choices are 
-    400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 500, 501, 502, 503, 504 and 505</li>
-  <li>So for example <a href="/2/401">/2/401</a> will throw a 401 error 50% of the time.</li>
-    
-</ul>
+    <ul>
+      <li><a href="/err">/err</a> will throw a random error every time.</li>
+      <li><a href="/2">/[1-100]</a> will throw a random error once every N times.</li>
+      <li><a href="/err/404">/err/404</a> will throw a 404 error every time.  Valid choices are 
+        400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 500, 501, 502, 503, 504 and 505</li>
+      <li>So for example <a href="/2/401">/2/401</a> will throw a 401 error 50% of the time.</li>
+    </ul>
  
+    <p>That's about it, it's hosted on <a href="http://code.google.com/appengine">Google App Engine</a> source is up at <a href="https://github.com/eurica/FEPServer">github.com/eurica/FEPServer</a>
+    <p>From <a href="http://euri.ca/?p=430">http://euri.ca</a>
+  </td></tr>
+</table>
+
     </div>
   </div>
 </body>

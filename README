@@ -1,0 +1,13 @@
+	
+Flakey Error-prone Server
+
+It's not a bug, it's a feature
+FEPServer 0.0 is a predictably failing server for testing monitoring software. You can use it to throw errors some or all of the time:
+
+/err will throw a random error every time.
+/[1-100] will throw a random error once every N times.
+/err/404 will throw a 404 error every time. Valid choices are 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 500, 501, 502, 503, 504 and 505
+So for example /2/401 will throw a 401 error 50% of the time.
+That's about it, it's hosted on Google App Engine source is up at github.com/eurica/FEPServer
+
+From http://euri.ca
