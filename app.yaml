@@ -1,0 +1,11 @@
+application: fepserver
+version: 10
+runtime: python
+api_version: 1
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+- url: .*
+  script: main.py

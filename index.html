@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SuperSimpleSecretStash</title>
+    <style>
+body {
+    background: url(http://toys.euri.ca/img/bg.png) repeat;
+}
+* {
+    font-family: 'lucida grande',lucida,tahoma,helvetica,arial,sans-serif;
+    color: #222;
+}
+#main {
+    width: 900px;
+    margin: auto auto;
+    text-align: left;
+    padding: 6px;
+}
+.box {
+    padding:6px;
+    border: 1px solid #888;
+    background-color: white;
+}
+.shadow {
+  -moz-box-shadow: 8px 8px 8px #888;
+  -webkit-box-shadow: 8px 8px 8px #888;
+  box-shadow: 8px 8px 8px #888;
+}
+h1, h2 {
+    text-shadow: #d3e4fB 2px 2px 2px;
+}
+input {
+    font-size:150%;
+    margin: 6px;
+    padding:2px;
+  -moz-box-shadow: 3px 3px 3px #ccc;
+  -webkit-box-shadow: 3px 3px 3px #ccc;
+  box-shadow: 3px 3px 3px #ccc;
+    text-shadow: #f3f4aB 0px 0px 1px;
+
+}
+.supercoolbutton {
+padding: 8px 20px;
+border: 1px solid #ccc;
+background-color: #eee;
+margin: 20px;
+}
+.subtitle{
+  color: #555;
+  text-align: right;
+  font-style: italic;
+  margin-top: -1.8em;  
+}
+.example{
+  padding:4px;
+  margin:8px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+    <div id="main">
+      <div class="box shadow">
+              
+<h1>Flakey Error-prone Server</h1>
+<div class="subtitle">It's not a bug, it's a feature</div>
+
+FEPS 0.0 is a predictably failing server for testing monitoring software.
+
+<ul>
+  <li><a href="/err">/err</a> will throw a random error every time.</li>
+  <li><a href="/2">/[1-100]</a> will throw a random error once every N times.</li>
+  <li><a href="/err/404">/err/404</a> will throw a 404 error every time.  Valid choices are 
+    400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 500, 501, 502, 503, 504 and 505</li>
+  <li>So for example <a href="/2/401">/2/401</a> will throw a 401 error 50% of the time.</li>
+    
+</ul>
+ 
+    </div>
+  </div>
+</body>
+</html>
