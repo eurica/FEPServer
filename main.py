@@ -17,7 +17,7 @@ class MainHandler(webapp.RequestHandler):
       if(int(opts[2]) in self.errors):
         err = int(opts[2])
     except:
-      err = random.choice(errors)
+      err = random.choice(self.errors)
 
     if( random.randint(1, odds) == 1 ):
       self.response.set_status(err)
